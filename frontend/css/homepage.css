@@ -1,0 +1,233 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,body{
+    height: 100vh;
+}  
+
+#bg{
+    height: 100%;
+    width: 100%;
+    background-color: cadetblue;
+    clip-path: polygon(0 0, 85% 0, 100% 26%, 100% 85%, 25% 100%, 0 85%);
+    position: absolute;
+    z-index: -10000;
+}
+
+#loading{
+    margin: 0;
+    padding: 0;
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background-color: rgb(231, 226, 226); 
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#logo{
+    width: 50vh;
+    height: 50vh;
+}
+
+.nav{
+    position: fixed;
+    width: 60px;
+    height: 100%;
+    background: peru;
+    transition: 0.5s;
+    overflow: hidden;
+}
+
+.nav:hover, .nav.active{
+    width: 300px;
+}
+
+.nav ul{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+}   
+
+.nav ul li{
+    position: relative;
+    width: 100%;
+    list-style: none;
+}
+
+.nav ul li:hover{
+    background: rgb(141, 77, 14);
+}
+
+.nav ul li a {
+    position: relative;
+    display: block;
+    width: 100%;
+    display: flex;
+    color:aliceblue ;
+    text-decoration: none;
+}
+
+.nav ul li a .icon{
+    position: relative;
+    display:block;
+    min-width: 60px;
+    height: 60px;
+    line-height: 60px;
+    text-align: center;
+}
+.nav ul li a .icon .fas {
+    font-size: 30px;
+}
+
+.nav ul li a .title{
+    position: relative;
+    display:block;
+    padding: 0 10px;
+    height: 60px;
+    line-height: 60px;
+    text-align: start;
+    white-space: nowrap;
+}
+
+.toggle{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 60px;
+    height: 60px;
+    background: peru;
+    cursor: pointer;
+}
+
+.toggle:hover{
+    color: peru;
+    background: rgb(141, 77, 14);
+}
+
+.toggle.active{
+    color: rgb(141, 77, 14);
+    background: rgb(141, 77, 14) ;
+}
+
+.toggle:before{
+    content: '\f0c9';
+    font-family: "Font Awesome 5 Free";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    line-height: 60px;
+    text-align: center;
+    font-size: 30px;
+    font-weight: 900;
+    color: aliceblue;
+}
+
+.toggle.active:before{
+    content: '\f00d';
+    color: white;
+
+}
+
+.toggle:hover:before{
+    color: peru;
+    background: rgb(141, 77, 14);
+}
+
+.currentpage{
+    background: rgb(141, 77, 14);
+}
+
+.currentpage .icon{
+    color: peru;
+}
+
+header{
+    color: aliceblue;
+    text-align: center;
+    background: peru;
+    line-height: 60px;
+}
+
+#content-grid{
+    display: grid;
+    grid-template-columns:repeat(12,8.34vw);
+	grid-template-rows: repeat(12, 8.34vh);
+    grid-gap: 0 0;
+}
+
+#text{
+    display: flexbox;
+    grid-row: 2/6;
+    grid-column: 2/6;
+    background-color: aliceblue;
+    
+}
+
+#text textarea{
+    align-items: stretch;
+    width: 100%;
+    height: 100%;
+    font-size: 16px;
+    resize: none;
+}
+
+#speak-on-but{
+    grid-row: 7;
+    grid-column: 4;
+    display: inline;
+    
+}
+#speak-on-but button{
+    width: 100%;
+    height: 100%;
+    background: red;
+    border: none;
+    text-align: center;
+    border-radius: 50%;
+    font-size: 35px;
+    transition:.4s;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.26);
+}
+#speak-on-but button:hover{
+    transition: .4s;
+    box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.26);
+}
+
+#speak-off-but{
+    grid-row: 7;
+    grid-column: 4;
+    display: none;
+
+    
+}
+#speak-off-but button{
+    width: 100%;
+    height: 100%;
+    background: red;
+    border: none;
+    text-align: center;
+    border-radius: 50%;
+    font-size: 35px;
+    transition:.4s;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.26);
+}
+#speak-off-but button:hover{
+    transition: .4s;
+    box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.26);
+
+}
+
+#image-display {
+    background-color: aliceblue;
+    display: flexbox;
+    grid-row: 2/6;
+    grid-column: 7/12;
+    background-color: aliceblue;
+}

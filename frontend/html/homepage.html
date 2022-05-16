@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script type="text/javascript" src="/eel.js"></script>
+
+    <script type="text/javascript" src="../js/homepage.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="../css/homepage.css">
+    <link rel="stylesheet" type="text/css" href="../fontawesome-free-5.13.0-web/css/all.css">
+
+    <title>Speech To Sign</title>
+
+    
+</head>
+
+<body  onload="setTimeout(loadingScreen, 1500)">
+    
+    <!-- Loading screen animation content -->
+    <div id="loading"> 
+        <div>
+            <img id="logo" src="../img/logo.png" alt="logo">
+            <p>Loading...</p>  
+
+        </div>
+    </div>
+
+    <!-- main page content -->
+    <div id = "bg"></div>  
+        <div class = "nav">
+            <ul>
+                <li>
+                    <a href="#" class ="currentpage">
+                        <span class = "icon"><i class="fas fa-sign-language"></i></span>
+                        <span class = "title">Speech To Sign</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" >
+                        <span class = "icon"><i class="fas fa-language"></i></span>
+                        <span class = "title">Sign To Speech</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class = "icon"><i class="fas fa-info-circle"></i></span>
+                        <span class = "title">About Us</span>
+                    </a>
+                </li>
+            </ul>
+
+        </div>
+        <div class = "toggle" onclick="togglemenu()"></div>
+
+        <header>
+            <h1>Speech To Sign</h1>
+        </header>
+
+        <div id = "content-grid">
+            <div id="text">  
+                <textarea id="textarea">Press button to Speak</textarea>
+            </div>
+            <div id = "speak-on-but">
+                <button onclick="MicOn()" ><i class="fas fa-microphone-slash"></i></button>
+
+            </div>
+            <div id = "speak-off-but">
+                <button onclick="MicOff()"><i class="fas fa-microphone"></i></button>
+
+            </div>
+            <div id = "image-display">
+
+            </div>
+        </div>
+        
+    </div>
+    
+    
+</body>
+</html>
